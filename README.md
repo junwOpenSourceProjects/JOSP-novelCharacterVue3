@@ -144,3 +144,12 @@ server: {
 ## License
 
 MIT
+## 项目架构
+
+```mermaid
+graph TB
+    User[用户] --> Views[页面层]
+    Views --> Components[组件层]
+    Components --> API[API接口层]
+    API --> Backend[后端服务]
+```
