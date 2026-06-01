@@ -11,11 +11,17 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
+    "@element-plus/nuxt": "^1.1.1",
     "@iconify-json/lucide": "^1.2.104",
     "@nuxt/ui": "^4.7.0",
+    "@pinia/nuxt": "^0.7.0",
     "@vueuse/core": "^14.2.1",
     "@vueuse/nuxt": "^14.2.1",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "element-plus": "^2.8.8",
     "nuxt": "^4.4.6",
+    "pinia": "^2.2.6",
     "vue": "^3.5.33",
     "vue-router": "^4.5.0"
   },

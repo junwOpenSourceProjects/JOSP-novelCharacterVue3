@@ -2,21 +2,29 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@element-plus/nuxt'
   ],
 
-  devtools: {
-    enabled: false
-  },
+  devtools: { enabled: false },
 
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/ferrari.css'
+  ],
 
   compatibilityDate: '2025-01-01',
 
   ui: {
-    primary: '#1456f0',
+    primary: '#DA291C',
     gray: 'neutral',
     fonts: false
+  },
+
+  elementPlus: {
+    importStyle: 'css',
+    themes: ['dark']
   },
 
   app: {
