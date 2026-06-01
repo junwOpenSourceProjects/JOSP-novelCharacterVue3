@@ -5,10 +5,11 @@ const route = useRoute()
 
 const links = [
   { label: '概览', icon: 'i-lucide-layout-dashboard', to: '/' },
-  { label: '人物管理', icon: 'i-lucide-users', to: '/characters' },
-  { label: '关系图谱', icon: 'i-lucide-git-branch', to: '/relationships' },
-  { label: '事件追踪', icon: 'i-lucide-calendar-clock', to: '/events' },
-  { label: '文本分析', icon: 'i-lucide-file-text', to: '/analysis' },
+  { label: '首页', icon: 'i-lucide-home', to: '/home' },
+  { label: '人物库', icon: 'i-lucide-users', to: '/library' },
+  { label: '仪表盘', icon: 'i-lucide-bar-chart-3', to: '/dashboard' },
+  { label: '创建角色', icon: 'i-lucide-user-plus', to: '/character/create' },
+  { label: '文本分析', icon: 'i-lucide-file-text', to: '/analyze' },
   { label: '设置', icon: 'i-lucide-settings', to: '/settings' }
 ]
 
@@ -27,11 +28,16 @@ const userMenuItems = [[{
 const title = computed(() => {
   const map: Record<string, string> = {
     '/': '概览',
-    '/characters': '人物管理',
-    '/relationships': '关系图谱',
-    '/events': '事件追踪',
-    '/analysis': '文本分析',
+    '/home': '首页',
+    '/library': '人物库',
+    '/dashboard': '仪表盘',
+    '/character/create': '创建角色',
+    '/analyze': '文本分析',
     '/settings': '设置'
+  }
+  // 动态匹配 /character/:id
+  if (route.path.startsWith('/character/')) {
+    return '角色详情'
   }
   return map[route.path] || '小说人物管理'
 })
