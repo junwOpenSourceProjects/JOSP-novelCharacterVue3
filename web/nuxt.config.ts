@@ -9,6 +9,15 @@ export default defineNuxtConfig({
 
   devtools: { enabled: false },
 
+  nitro: {
+    devProxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true
+      }
+    }
+  },
+
   css: [
     '~/assets/css/main.css',
     '~/assets/css/ferrari.css'

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: '/api',
+  baseURL: 'http://localhost:3001/api',
   timeout: 300000  // 5分钟，给 AI 生成足够时间
 })
 
