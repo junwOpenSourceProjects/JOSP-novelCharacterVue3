@@ -12,7 +12,16 @@ dist-ssr/
 
 # Vite
 .vite/
+
+# Nuxt / Nitro
+.nuxt/
+.output/
+.nitro/
+.cache/
+
+# Local env files
 .env
+.env.local
 .env.*.local
 
 # npm / yarn / pnpm
