@@ -14,7 +14,7 @@ importers:
   .:
     dependencies:
       axios:
-        specifier: ^1.18.1
+        specifier: ^1.8.0
         version: 1.18.1
       echarts:
         specifier: ^6.1.0
